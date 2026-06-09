@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pakistan Trip | Wild & Cheap</title>
+  <meta name="description" content="Full budget backpacker guide to Pakistan — Hunza Valley, K2 Base Camp, Lahore, and the Karakoram Highway. Real costs, real routes." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* Pakistan page-specific styles */
+    .page-hero {
+      min-height: 70vh;
+      background: linear-gradient(160deg, var(--green-900) 0%, #0a3d1f 40%, var(--green-800) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: var(--nav-height);
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 30% 70%, rgba(72,186,98,0.12) 0%, transparent 60%),
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 1200 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,400 150,100 280,220 420,60 560,160 680,40 800,120 920,30 1060,100 1200,60 1200,400' fill='rgba(26,92,42,0.35)'/%3E%3Cpolygon points='0,400 100,180 220,270 360,100 500,200 640,80 780,160 900,70 1040,140 1200,90 1200,400' fill='rgba(13,43,26,0.5)'/%3E%3C/svg%3E");
+      background-position: bottom;
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+    }
+    .page-hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 760px;
+      padding: 60px 24px;
+    }
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 20px;
+    }
+    .breadcrumb a { color: rgba(255,255,255,0.55); transition: color var(--transition); }
+    .breadcrumb a:hover { color: var(--green-300); }
+    .breadcrumb i { font-size: 0.65rem; }
+    .page-hero-content h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(2.5rem, 6vw, 4.2rem);
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+    .page-hero-content h1 em { color: var(--green-200); font-style: italic; }
+    .page-hero-content p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.7;
+      margin-bottom: 36px;
+    }
+    .hero-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+    .chip {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.8);
+      padding: 7px 16px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      backdrop-filter: blur(8px);
+    }
+    .chip i { color: var(--green-300); }
+
+    /* Trip content */
+    .trip-content { padding: 80px 0; background: var(--white); }
+    .trip-layout {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 60px;
+      align-items: start;
+    }
+
+    /* Main content */
+    .trip-main h2 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      color: var(--green-900);
+      margin: 48px 0 16px;
+    }
+    .trip-main h2:first-child { margin-top: 0; }
+    .trip-main p {
+      color: var(--text-muted);
+      line-height: 1.8;
+      font-size: 1.02rem;
+      margin-bottom: 16px;
+    }
+    .trip-main ul {
+      margin: 0 0 20px 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .trip-main ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: var(--text-body);
+      font-size: 0.97rem;
+      line-height: 1.6;
+    }
+    .trip-main ul li::before {
+      content: '';
+      width: 8px; height: 8px;
+      background: var(--green-500);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 7px;
+    }
+
+    /* Itinerary */
+    .itinerary { margin: 32px 0; }
+    .itinerary-week {
+      background: var(--green-50);
+      border: 1px solid var(--green-100);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+    .week-header {
+      background: var(--green-700);
+      color: var(--white);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .week-header h4 {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+    }
+    .week-header span {
+      font-size: 0.82rem;
+      opacity: 0.8;
+    }
+    .week-days { padding: 20px 24px; display: flex; flex-direction: column; gap: 14px; }
+    .day {
+      display: flex;
+      gap: 16px;
+    }
+    .day-num {
+      background: var(--green-600);
+      color: var(--white);
+      font-size: 0.75rem;
+      font-weight: 700;
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .day-info h5 {
+      font-size: 0.95rem;
+      color: var(--green-900);
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+    .day-info p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* Budget table */
+    .budget-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0 32px;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .budget-table thead { background: var(--green-700); color: var(--white); }
+    .budget-table th, .budget-table td {
+      padding: 14px 20px;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+    .budget-table th { font-weight: 600; letter-spacing: 0.04em; }
+    .budget-table td { border-bottom: 1px solid var(--green-50); }
+    .budget-table tbody tr:last-child td { border-bottom: none; }
+    .budget-table tbody tr:hover td { background: var(--green-50); }
+    .budget-table .total { font-weight: 700; color: var(--green-700); }
+    .budget-table .total td { border-top: 2px solid var(--green-200); background: var(--green-50); }
+
+    .callout {
+      background: var(--green-50);
+      border-left: 4px solid var(--green-500);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      padding: 20px 24px;
+      margin: 24px 0;
+    }
+    .callout p { margin: 0; font-size: 0.97rem; color: var(--green-900); }
+    .callout strong { color: var(--green-700); }
+
+    /* Sticky sidebar */
+    .trip-sidebar { position: sticky; top: 90px; }
+    .sidebar-card {
+      background: var(--green-50);
+      border: 1px solid var(--green-100);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      margin-bottom: 20px;
+    }
+    .sidebar-card h4 {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      color: var(--green-900);
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--green-200);
+    }
+    .sidebar-stat {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--green-100);
+    }
+    .sidebar-stat:last-of-type { border-bottom: none; }
+    .sidebar-stat-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .sidebar-stat-label i { color: var(--green-500); width: 14px; }
+    .sidebar-stat-value {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--green-900);
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 999px;
+    }
+    .status-planning {
+      background: #fff8e1;
+      color: #b7791f;
+      border: 1px solid #fde68a;
+    }
+    .status-badge::before {
+      content: '';
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: currentColor;
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .gear-list { display: flex; flex-direction: column; gap: 10px; }
+    .gear-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: var(--text-body);
+    }
+    .gear-item i { color: var(--green-500); width: 16px; text-align: center; }
+
+    @media (max-width: 900px) {
+      .trip-layout { grid-template-columns: 1fr; }
+      .trip-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">&#9976;</span>
+        Wild<span class="logo-accent">&</span>Cheap
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pakistan.html" class="active">Pakistan Trip</a></li>
+        <li><a href="index.html#tips">Travel Tips</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact" class="btn-nav">Join the Journey</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="page-hero">
+    <div class="page-hero-content">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span>Pakistan Trip</span>
+      </div>
+      <h1>Pakistan —<br /><em>The Rooftop of the World</em></h1>
+      <p>Karakoram Highway. Hunza Valley. K2 Base Camp. Lahore's street food. This is my pilot trip — and I'm documenting every dollar spent so you can do it too.</p>
+      <div class="hero-chips">
+        <span class="chip"><i class="fa-solid fa-calendar-days"></i> 3–4 Weeks</span>
+        <span class="chip"><i class="fa-solid fa-wallet"></i> Budget Trip</span>
+        <span class="chip"><i class="fa-solid fa-mountain"></i> Karakoram Range</span>
+        <span class="chip"><i class="fa-solid fa-person-hiking"></i> Backpacker Friendly</span>
+        <span class="chip"><i class="fa-solid fa-camera"></i> Instagram Gold</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== TRIP CONTENT ===== -->
+  <section class="trip-content">
+    <div class="container">
+      <div class="trip-layout">
+
+        <!-- ======= MAIN CONTENT ======= -->
+        <article class="trip-main">
+
+          <h2>Why Pakistan?</h2>
+          <p>Pakistan is one of the most jaw-dropping, off-the-beaten-path destinations on earth. It has five of the world's fourteen 8,000m+ peaks, including K2 — the world's second highest and arguably most challenging mountain. The Karakoram Highway, dubbed the "Eighth Wonder of the World," snakes through mountains that make the Alps look like hills. And the hospitality? Pakistani hospitality is legendary.</p>
+          <p>Yet most people don't go. They've been misled by outdated travel warnings and media narratives. Tourist regions like Gilgit-Baltistan and Hunza Valley have an incredibly low crime rate and locals who will quite literally invite you into their homes for chai.</p>
+          <p>And the cost? You can live comfortably in Pakistan on $25–35 a day. In the mountains, even less.</p>
+
+          <div class="callout">
+            <p><strong>Concept check:</strong> "Adventure costs less than you think." Pakistan is the perfect proof. This 3-week trip costs less than a week in Norway — with 10x the dramatic landscapes.</p>
+          </div>
+
+          <h2>The Route</h2>
+          <p>This is the route I'm planning for the pilot trip. It covers the greatest hits while keeping transport costs low by following a logical south-to-north flow.</p>
+
+          <div class="itinerary">
+            <div class="itinerary-week">
+              <div class="week-header">
+                <h4>&#127470;&#127477; Week 1 — Lahore: The Gateway</h4>
+                <span>Days 1–7</span>
+              </div>
+              <div class="week-days">
+                <div class="day">
+                  <div class="day-num">1–2</div>
+                  <div class="day-info">
+                    <h5>Arrival & Lahore Old City</h5>
+                    <p>Land in Lahore, get settled in a hostel. Explore the Walled City, Lahore Fort, and Badshahi Mosque on foot.</p>
+                  </div>
+                </div>
+                <div class="day">
+                  <div class="day-num">3–4</div>
+                  <div class="day-info">
+                    <h5>Food Tour & Anarkali Bazaar</h5>
+                    <p>Street food deep dive — nihari, biryani, lassi. Anarkali Bazaar for authentic Pakistani market culture.</p>
+                  </div>
+                </div>
+                <div class="day">
+                  <div class="day-num">5–7</div>
+                  <div class="day-info">
+                    <h5>Lahore to Islamabad</h5>
+                    <p>Day trip or short bus to Islamabad. Faisal Mosque, the Margalla Hills hike, and a calm base before heading north.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="itinerary-week">
+              <div class="week-header">
+                <h4>&#127956; Week 2 — Karakoram Highway</h4>
+                <span>Days 8–14</span>
+              </div>
+              <div class="week-days">
+                <div class="day">
+                  <div class="day-num">8–9</div>
+                  <div class="day-info">
+                    <h5>Islamabad to Gilgit</h5>
+                    <p>NATCO bus up the KKH — a full day of jaw-dropping mountain scenery. One of the world's great road journeys.</p>
+                  </div>
+                </div>
+                <div class="day">
+                  <div class="day-num">10–11</div>
+                  <div class="day-info">
+                    <h5>Gilgit Base & Rakaposhi Views</h5>
+                    <p>Acclimatise in Gilgit. Day hike with views of Rakaposhi (7,788m). Gear check for the trek ahead.</p>
+                  </div>
+                </div>
+                <div class="day">
+                  <div class="day-num">12–14</div>
+                  <div class="day-info">
+                    <h5>Hunza Valley & Attabad Lake</h5>
+                    <p>The crown jewel. Turquoise lake, apricot orchards, ancient Baltit and Altit forts. Sunrise from Eagle's Nest viewpoint.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="itinerary-week">
+              <div class="week-header">
+                <h4>&#9968; Week 3–4 — Skardu & K2 Region</h4>
+                <span>Days 15–25</span>
+              </div>
+              <div class="week-days">
+                <div class="day">
+                  <div class="day-num">15–16</div>
+                  <div class="day-info">
+                    <h5>Hunza to Skardu</h5>
+                    <p>Jeep transfer or local bus to Skardu — gateway to the K2 region. Deosai National Park access point.</p>
+                  </div>
+                </div>
+                <div class="day">
+                  <div class="day-num">17–18</div>
+                  <div class="day-info">
+                    <h5>Deosai Plateau</h5>
+                    <p>The world's second highest plateau at 4,114m. Wildflowers, Himalayan brown bears, and zero crowds.</p>
+                  </div>
+                </div>
+                <div class="day">
+                  <div class="day-num">19–25</div>
+                  <div class="day-info">
+                    <h5>K2 Base Camp Trek (Concordia)</h5>
+                    <p>The big one. 7–10 day trek to Concordia and K2 Base Camp at 5,100m. Requires a guide and permit — worth every rupee.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h2>Budget Breakdown (Estimated)</h2>
+          <p>All costs in USD. Based on 3-week trip. Exchange rate ~280 PKR per USD (check current rates). This is a working budget — I'll update it with real figures after the trip.</p>
+
+          <table class="budget-table">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Daily Est.</th>
+                <th>Trip Total Est.</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>&#9992; Flights (return)</td>
+                <td>—</td>
+                <td>$350–600</td>
+                <td>Europe/UK origin. Book 6–8 weeks out.</td>
+              </tr>
+              <tr>
+                <td>&#127968; Accommodation</td>
+                <td>$5–12</td>
+                <td>$105–252</td>
+                <td>Guesthouses &amp; hostels. Mountain guesthouses are cheap.</td>
+              </tr>
+              <tr>
+                <td>&#127860; Food</td>
+                <td>$5–10</td>
+                <td>$105–210</td>
+                <td>Street food and local dhabas. Incredible value.</td>
+              </tr>
+              <tr>
+                <td>&#128652; Transport (in-country)</td>
+                <td>$3–6</td>
+                <td>$63–126</td>
+                <td>NATCO buses, local jeeps, shared transport.</td>
+              </tr>
+              <tr>
+                <td>&#9968; K2 Trek (guide+permit)</td>
+                <td>—</td>
+                <td>$150–300</td>
+                <td>Permit ~$100, guide ~$30–50/day for 5 days.</td>
+              </tr>
+              <tr>
+                <td>&#127512; Visa</td>
+                <td>—</td>
+                <td>~$50</td>
+                <td>eVisa available online. Fast and easy.</td>
+              </tr>
+              <tr>
+                <td>&#127973; Travel Insurance</td>
+                <td>—</td>
+                <td>$40–80</td>
+                <td>Non-negotiable. Get high-altitude trekking cover.</td>
+              </tr>
+              <tr>
+                <td>&#127932; Misc / Buffer</td>
+                <td>$2–4</td>
+                <td>$50–100</td>
+                <td>SIM card, souvenirs, unexpected costs.</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr class="total">
+                <td><strong>TOTAL (all-in)</strong></td>
+                <td>~$25–35/day</td>
+                <td><strong>$913–1,718</strong></td>
+                <td>3 weeks. Including flights.</td>
+              </tr>
+            </tfoot>
+          </table>
+
+          <div class="callout">
+            <p><strong>The bottom line:</strong> A 3-week Pakistan adventure including flights can cost under $1,200 if you're smart about it. That's less than a weekend city break in Paris with flights.</p>
+          </div>
+
+          <h2>Practical Info</h2>
+          <ul>
+            <li>Visa: Pakistan eVisa is available online for most nationalities. Takes 2–5 business days. Apply at least 2 weeks before travel.</li>
+            <li>Safety: Tourist areas (Gilgit-Baltistan, Hunza, Lahore, Islamabad) are safe. Always check your government's current travel advice and register with your embassy.</li>
+            <li>Currency: Pakistani Rupee (PKR). ATMs available in Lahore, Islamabad, Gilgit. In remote areas, carry cash.</li>
+            <li>SIM card: Buy a SIM at Lahore airport. Jazz or Zong are best for data coverage in the north.</li>
+            <li>Best time to visit: May–October for the Karakoram. July–August is peak season for K2 Base Camp.</li>
+            <li>Altitude: Gilgit is at ~1,500m, Skardu at ~2,228m, K2 BC at ~5,100m. Take 2–3 days to acclimatise before big treks.</li>
+            <li>Language: Urdu is official. English is widely spoken in cities and tourist areas. Learning "shukriya" (thank you) goes a long way.</li>
+            <li>Dress code: Conservative dress is respectful. Shoulders and knees covered in cities. In the mountains, trekking gear is fine.</li>
+          </ul>
+
+          <h2>Instagram-Worthy Shots</h2>
+          <p>Here's the shot list I'm building for Instagram content. These are the spots that will stop the scroll:</p>
+          <ul>
+            <li>Sunrise from Eagle's Nest over Hunza Valley — the golden light on Rakaposhi</li>
+            <li>Attabad Lake's impossible turquoise water against the brown Karakoram rock</li>
+            <li>K2 from Concordia — the 360° view of four 8,000m peaks at once</li>
+            <li>Lahore Fort at dusk, the calls to prayer echoing across the city</li>
+            <li>Street food: a plate of nihari with naan, steam rising, hands in frame</li>
+            <li>Deosai Plateau wildflowers with a mountain backdrop</li>
+            <li>The KKH road disappearing into the mountains — taken from a bus window</li>
+          </ul>
+
+        </article>
+
+        <!-- ======= SIDEBAR ======= -->
+        <aside class="trip-sidebar">
+
+          <div class="sidebar-card">
+            <h4>&#128205; Trip at a Glance</h4>
+            <div class="sidebar-stat">
+              <span class="sidebar-stat-label"><i class="fa-solid fa-circle-dot"></i> Status</span>
+              <span class="sidebar-stat-value"><span class="status-badge status-planning">Planning</span></span>
+            </div>
+            <div class="sidebar-stat">
+              <span class="sidebar-stat-label"><i class="fa-solid fa-calendar"></i> Duration</span>
+              <span class="sidebar-stat-value">3–4 Weeks</span>
+            </div>
+            <div class="sidebar-stat">
+              <span class="sidebar-stat-label"><i class="fa-solid fa-wallet"></i> Budget (all-in)</span>
+              <span class="sidebar-stat-value">~$1,200</span>
+            </div>
+            <div class="sidebar-stat">
+              <span class="sidebar-stat-label"><i class="fa-solid fa-plane-departure"></i> Fly into</span>
+              <span class="sidebar-stat-value">Lahore (LHE)</span>
+            </div>
+            <div class="sidebar-stat">
+              <span class="sidebar-stat-label"><i class="fa-solid fa-mountain"></i> Max altitude</span>
+              <span class="sidebar-stat-value">5,100m (K2 BC)</span>
+            </div>
+            <div class="sidebar-stat">
+              <span class="sidebar-stat-label"><i class="fa-solid fa-sun"></i> Best season</span>
+              <span class="sidebar-stat-value">May – October</span>
+            </div>
+            <div class="sidebar-stat">
+              <span class="sidebar-stat-label"><i class="fa-solid fa-passport"></i> Visa</span>
+              <span class="sidebar-stat-value">eVisa ~$50</span>
+            </div>
+          </div>
+
+          <div class="sidebar-card">
+            <h4>&#127462;&#127477; What to Pack</h4>
+            <div class="gear-list">
+              <div class="gear-item"><i class="fa-solid fa-check"></i> 40L backpack (not a suitcase)</div>
+              <div class="gear-item"><i class="fa-solid fa-check"></i> Lightweight sleeping bag (3-season)</div>
+              <div class="gear-item"><i class="fa-solid fa-check"></i> Waterproof jacket</div>
+              <div class="gear-item"><i class="fa-solid fa-check"></i> Trekking boots (broken in)</div>
+              <div class="gear-item"><i class="fa-solid fa-check"></i> Sun protection (high altitude sun is brutal)</div>
+              <div class="gear-item"><i class="fa-solid fa-check"></i> Water purification tablets</div>
+              <div class="gear-item"><i class="fa-solid fa-check"></i> Portable power bank</div>
+              <div class="gear-item"><i class="fa-solid fa-check"></i> Conservative layer for cities</div>
+              <div class="gear-item"><i class="fa-solid fa-check"></i> Travel insurance card (printed)</div>
+              <div class="gear-item"><i class="fa-solid fa-check"></i> Cash (USD → PKR)</div>
+            </div>
+          </div>
+
+          <div class="sidebar-card" style="background: var(--green-700); border-color: var(--green-600);">
+            <h4 style="color: var(--white); border-color: var(--green-500);">&#128247; Follow on Instagram</h4>
+            <p style="color: rgba(255,255,255,0.75); font-size: 0.88rem; margin-bottom: 16px; line-height: 1.6;">I'll be posting real-time updates, stories, and behind-the-scenes content from the road.</p>
+            <!-- Replace carotinoadventures -->
+            <a href="https://instagram.com/carotinoadventures" target="_blank" rel="noopener noreferrer" class="btn btn-instagram" style="width: 100%; justify-content: center;">
+              <i class="fa-brands fa-instagram"></i> Follow Along
+            </a>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEWSLETTER ===== -->
+  <section class="newsletter">
+    <div class="container">
+      <div class="newsletter-inner">
+        <div class="newsletter-text">
+          <h3>Get the Pakistan packing list + budget sheet</h3>
+          <p>Free download when you subscribe. Updated with real figures after the trip.</p>
+        </div>
+        <form class="newsletter-form" onsubmit="handleSubscribe(event)">
+          <input type="email" placeholder="your@email.com" required aria-label="Email address" />
+          <button type="submit" class="btn btn-primary">Send it to me</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">Wild<span class="logo-accent">&</span>Cheap</a>
+          <p>Adventure costs less than you think. A backpacker blog documenting budget travel, one country at a time.</p>
+          <div class="social-links">
+            <a href="https://instagram.com/carotinoadventures" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h5>Explore</h5>
+          <ul>
+            <li><a href="pakistan.html">Pakistan Trip</a></li>
+            <li><a href="index.html#tips">Travel Tips</a></li>
+            <li><a href="index.html#about">About Me</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h5>Connect</h5>
+          <ul>
+            <li><a href="https://instagram.com/carotinoadventures" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="index.html#contact">Newsletter</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Wild&Cheap. Made by a backpacker, for backpackers.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Sticky navbar
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Mobile hamburger
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      hamburger.classList.toggle('active');
+    });
+
+    // Newsletter
+    function handleSubscribe(e) {
+      e.preventDefault();
+      const input = e.target.querySelector('input[type="email"]');
+      const btn = e.target.querySelector('button');
+      btn.textContent = '✓ You\'re on the list!';
+      btn.disabled = true;
+      input.disabled = true;
+    }
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.itinerary-week, .sidebar-card, .callout').forEach(el => {
+      el.classList.add('reveal');
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
