@@ -40,13 +40,6 @@
 
   --transition: 0.3s ease;
   --nav-height: 70px;
-
-  /* Carotino sticker accents */
-  --sticker-olive:  #70a810;
-  --sticker-orange: #f05000;
-  --sticker-blue:   #3888b0;
-  --sticker-sand:   #d0c898;
-  --sticker-deep:   #3f5318;
 }
 
 /* ===== RESET & BASE ===== */
@@ -76,8 +69,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .tag {
   display: inline-block;
-  background: var(--sticker-sand);
-  color: var(--sticker-deep);
+  background: var(--green-100);
+  color: var(--green-700);
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.06em;
@@ -125,14 +118,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .btn-primary {
-  background: var(--sticker-olive);
+  background: var(--green-600);
   color: var(--white);
-  box-shadow: 0 4px 16px rgba(112,168,16,0.35);
+  box-shadow: 0 4px 16px rgba(33,122,53,0.35);
 }
 .btn-primary:hover {
-  background: var(--sticker-deep);
+  background: var(--green-700);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(63,83,24,0.45);
+  box-shadow: 0 8px 24px rgba(33,122,53,0.45);
 }
 
 .btn-ghost {
@@ -148,37 +141,37 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .btn-outline {
   background: transparent;
-  color: var(--sticker-deep);
-  border: 2px solid var(--sticker-olive);
+  color: var(--green-700);
+  border: 2px solid var(--green-500);
 }
 .btn-outline:hover {
-  background: var(--sticker-olive);
+  background: var(--green-600);
   color: var(--white);
   transform: translateY(-2px);
 }
 
 .btn-instagram {
-  background: linear-gradient(135deg, var(--sticker-orange), var(--sticker-olive), var(--sticker-blue));
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
   color: var(--white);
   font-size: 1rem;
   padding: 16px 36px;
   border-radius: var(--radius-lg);
-  box-shadow: 0 6px 24px rgba(56,136,176,0.35);
+  box-shadow: 0 6px 24px rgba(131,58,180,0.35);
 }
 .btn-instagram:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 36px rgba(56,136,176,0.5);
+  box-shadow: 0 12px 36px rgba(131,58,180,0.5);
 }
 
 .btn-nav {
-  background: var(--sticker-orange);
+  background: var(--green-500);
   color: var(--white) !important;
   padding: 8px 20px;
   border-radius: var(--radius-md);
   font-weight: 600;
   transition: var(--transition);
 }
-.btn-nav:hover { background: #c94100; }
+.btn-nav:hover { background: var(--green-700); }
 
 /* ===== NAVBAR ===== */
 .navbar {
@@ -216,7 +209,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: var(--white);
   letter-spacing: -0.02em;
 }
-.logo-icon { margin-right: 6px; }
 .logo-sticker {
   width: 34px;
   height: 34px;
@@ -225,7 +217,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   border: 2px solid rgba(255,255,255,0.6);
   box-shadow: 0 2px 10px rgba(0,0,0,0.25);
 }
-.logo-accent { color: var(--sticker-orange); }
 
 .nav-links {
   display: flex;
@@ -245,7 +236,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   position: absolute;
   bottom: -4px; left: 0;
   width: 0; height: 2px;
-  background: var(--sticker-blue);
+  background: var(--green-300);
   transition: width var(--transition);
 }
 .nav-links li a:not(.btn-nav):hover::after,
@@ -418,7 +409,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   white-space: nowrap;
 }
 .concept-inner span {
-  color: var(--sticker-sand);
+  color: var(--green-300);
   font-size: 0.85rem;
   font-weight: 500;
   letter-spacing: 0.06em;
@@ -509,7 +500,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: var(--text-muted);
   font-weight: 500;
 }
-.trip-meta i { color: var(--sticker-orange); }
+.trip-meta i { color: var(--green-500); }
 
 .trip-card-info h3 {
   font-family: var(--font-heading);
@@ -539,7 +530,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: var(--text-body);
   font-weight: 500;
 }
-.trip-highlights i { color: var(--sticker-olive); font-size: 0.8rem; }
+.trip-highlights i { color: var(--green-500); font-size: 0.8rem; }
 
 /* ===== PHILOSOPHY ===== */
 .philosophy {
@@ -593,7 +584,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .value-icon {
   width: 48px; height: 48px;
-  background: var(--sticker-blue);
+  background: var(--green-600);
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
@@ -646,7 +637,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-family: var(--font-heading);
   font-size: 2.5rem;
   font-weight: 900;
-  color: var(--sticker-sand);
+  color: var(--green-400);
   opacity: 0.6;
   line-height: 1;
   margin-bottom: 16px;
@@ -809,7 +800,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: rgba(255,255,255,0.6);
   transition: color var(--transition);
 }
-.footer-links a:hover { color: var(--sticker-sand); }
+.footer-links a:hover { color: var(--green-300); }
 
 .footer-bottom {
   padding: 20px 0;
