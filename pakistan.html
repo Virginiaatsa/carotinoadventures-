@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pakistan Trip | Carotino Adventures</title>
-  <meta name="description" content="Full budget backpacker guide to Pakistan — Hunza Valley, K2 Base Camp, Lahore, and the Karakoram Highway. Real costs, real routes." />
+  <meta name="description" content="Backpacker guide to Pakistan — Hunza Valley, Lahore, Skardu, and the Karakoram Highway. Real routes and practical travel notes." />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="images/Sticker.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -189,28 +189,33 @@
       margin: 0;
     }
 
-    /* Budget table */
-    .budget-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 20px 0 32px;
-      background: var(--white);
+    .place-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin: 24px 0 32px;
+    }
+    .place-shot {
       border-radius: var(--radius-lg);
       overflow: hidden;
       box-shadow: var(--shadow-sm);
+      border: 1px solid var(--green-100);
+      background: var(--white);
     }
-    .budget-table thead { background: var(--green-700); color: var(--white); }
-    .budget-table th, .budget-table td {
-      padding: 14px 20px;
-      text-align: left;
-      font-size: 0.9rem;
+    .place-shot img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
     }
-    .budget-table th { font-weight: 600; letter-spacing: 0.04em; }
-    .budget-table td { border-bottom: 1px solid var(--green-50); }
-    .budget-table tbody tr:last-child td { border-bottom: none; }
-    .budget-table tbody tr:hover td { background: var(--green-50); }
-    .budget-table .total { font-weight: 700; color: var(--green-700); }
-    .budget-table .total td { border-top: 2px solid var(--green-200); background: var(--green-50); }
+    .place-shot span {
+      display: block;
+      padding: 10px 12px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
 
     .callout {
       background: var(--green-50);
@@ -300,6 +305,7 @@
     @media (max-width: 900px) {
       .trip-layout { grid-template-columns: 1fr; }
       .trip-sidebar { position: static; }
+      .place-gallery { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -317,7 +323,7 @@
         <li><a href="pakistan.html" class="active">Pakistan Trip</a></li>
         <li><a href="index.html#tips">Travel Tips</a></li>
         <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#contact" class="btn-nav">Join the Journey</a></li>
+        <li><a href="https://instagram.com/carotinoadventures" target="_blank" rel="noopener noreferrer" class="btn-nav">Follow me</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
@@ -334,10 +340,10 @@
         <span>Pakistan Trip</span>
       </div>
       <h1>Pakistan —<br /><em>The Rooftop of the World</em></h1>
-      <p>Karakoram Highway. Hunza Valley. K2 Base Camp. Lahore's street food. This is my pilot trip — and I'm documenting every dollar spent so you can do it too.</p>
+      <p>Karakoram Highway. Hunza Valley. Skardu. Lahore's street food. This is my pilot trip — and I'm documenting the full route so you can do it too.</p>
       <div class="hero-chips">
         <span class="chip"><i class="fa-solid fa-calendar-days"></i> 3–4 Weeks</span>
-        <span class="chip"><i class="fa-solid fa-wallet"></i> Budget Trip</span>
+        <span class="chip"><i class="fa-solid fa-map"></i> Route Focused</span>
         <span class="chip"><i class="fa-solid fa-mountain"></i> Karakoram Range</span>
         <span class="chip"><i class="fa-solid fa-person-hiking"></i> Backpacker Friendly</span>
         <span class="chip"><i class="fa-solid fa-camera"></i> Instagram Gold</span>
@@ -354,16 +360,35 @@
         <article class="trip-main">
 
           <h2>Why Pakistan?</h2>
-          <p>Pakistan is one of the most jaw-dropping, off-the-beaten-path destinations on earth. It has five of the world's fourteen 8,000m+ peaks, including K2 — the world's second highest and arguably most challenging mountain. The Karakoram Highway, dubbed the "Eighth Wonder of the World," snakes through mountains that make the Alps look like hills. And the hospitality? Pakistani hospitality is legendary.</p>
+          <p>Pakistan is one of the most jaw-dropping, off-the-beaten-path destinations on earth. The Karakoram Highway, dubbed the "Eighth Wonder of the World," snakes through mountains that make the Alps look like hills. And the hospitality? Pakistani hospitality is legendary.</p>
           <p>Yet most people don't go. They've been misled by outdated travel warnings and media narratives. Tourist regions like Gilgit-Baltistan and Hunza Valley have an incredibly low crime rate and locals who will quite literally invite you into their homes for chai.</p>
-          <p>And the cost? You can live comfortably in Pakistan on $25–35 a day. In the mountains, even less.</p>
+          <p>From Lahore's architecture to the north's glacier-fed valleys, the variety of landscapes in one trip is incredible.</p>
 
           <div class="callout">
-            <p><strong>Concept check:</strong> "Adventure costs less than you think." Pakistan is the perfect proof. This 3-week trip costs less than a week in Norway — with 10x the dramatic landscapes.</p>
+            <p><strong>Concept check:</strong> Pakistan combines huge mountain scenery, rich city culture, and warm local hospitality in one unforgettable route.</p>
           </div>
 
           <h2>The Route</h2>
-          <p>This is the route I'm planning for the pilot trip. It covers the greatest hits while keeping transport costs low by following a logical south-to-north flow.</p>
+          <p>This is the route I'm planning for the pilot trip. It covers the greatest highlights through a logical south-to-north flow.</p>
+
+          <div class="place-gallery">
+            <figure class="place-shot">
+              <img src="https://source.unsplash.com/1200x800/?lahore,mosque" alt="Lahore" />
+              <span>Lahore</span>
+            </figure>
+            <figure class="place-shot">
+              <img src="https://source.unsplash.com/1200x800/?hunza,valley,pakistan" alt="Hunza Valley" />
+              <span>Hunza Valley</span>
+            </figure>
+            <figure class="place-shot">
+              <img src="https://source.unsplash.com/1200x800/?attabad,lake,pakistan" alt="Attabad Lake" />
+              <span>Attabad Lake</span>
+            </figure>
+            <figure class="place-shot">
+              <img src="https://source.unsplash.com/1200x800/?skardu,mountains" alt="Skardu" />
+              <span>Skardu</span>
+            </figure>
+          </div>
 
           <div class="itinerary">
             <div class="itinerary-week">
@@ -428,7 +453,7 @@
 
             <div class="itinerary-week">
               <div class="week-header">
-                <h4>&#9968; Week 3–4 — Skardu & K2 Region</h4>
+                <h4>&#9968; Week 3–4 — Skardu & Deosai</h4>
                 <span>Days 15–25</span>
               </div>
               <div class="week-days">
@@ -436,7 +461,7 @@
                   <div class="day-num">15–16</div>
                   <div class="day-info">
                     <h5>Hunza to Skardu</h5>
-                    <p>Jeep transfer or local bus to Skardu — gateway to the K2 region. Deosai National Park access point.</p>
+                    <p>Jeep transfer or local bus to Skardu — an iconic mountain hub and gateway to Deosai National Park.</p>
                   </div>
                 </div>
                 <div class="day">
@@ -449,88 +474,12 @@
                 <div class="day">
                   <div class="day-num">19–25</div>
                   <div class="day-info">
-                    <h5>K2 Base Camp Trek (Concordia)</h5>
-                    <p>The big one. 7–10 day trek to Concordia and K2 Base Camp at 5,100m. Requires a guide and permit — worth every rupee.</p>
+                    <h5>Shigar Valley & Upper Kachura</h5>
+                    <p>Explore local villages, alpine lakes, and broad mountain views with day hikes and jeep routes from Skardu.</p>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          <h2>Budget Breakdown (Estimated)</h2>
-          <p>All costs in USD. Based on 3-week trip. Exchange rate ~280 PKR per USD (check current rates). This is a working budget — I'll update it with real figures after the trip.</p>
-
-          <table class="budget-table">
-            <thead>
-              <tr>
-                <th>Category</th>
-                <th>Daily Est.</th>
-                <th>Trip Total Est.</th>
-                <th>Notes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>&#9992; Flights (return)</td>
-                <td>—</td>
-                <td>$350–600</td>
-                <td>Europe/UK origin. Book 6–8 weeks out.</td>
-              </tr>
-              <tr>
-                <td>&#127968; Accommodation</td>
-                <td>$5–12</td>
-                <td>$105–252</td>
-                <td>Guesthouses &amp; hostels. Mountain guesthouses are cheap.</td>
-              </tr>
-              <tr>
-                <td>&#127860; Food</td>
-                <td>$5–10</td>
-                <td>$105–210</td>
-                <td>Street food and local dhabas. Incredible value.</td>
-              </tr>
-              <tr>
-                <td>&#128652; Transport (in-country)</td>
-                <td>$3–6</td>
-                <td>$63–126</td>
-                <td>NATCO buses, local jeeps, shared transport.</td>
-              </tr>
-              <tr>
-                <td>&#9968; K2 Trek (guide+permit)</td>
-                <td>—</td>
-                <td>$150–300</td>
-                <td>Permit ~$100, guide ~$30–50/day for 5 days.</td>
-              </tr>
-              <tr>
-                <td>&#127512; Visa</td>
-                <td>—</td>
-                <td>~$50</td>
-                <td>eVisa available online. Fast and easy.</td>
-              </tr>
-              <tr>
-                <td>&#127973; Travel Insurance</td>
-                <td>—</td>
-                <td>$40–80</td>
-                <td>Non-negotiable. Get high-altitude trekking cover.</td>
-              </tr>
-              <tr>
-                <td>&#127932; Misc / Buffer</td>
-                <td>$2–4</td>
-                <td>$50–100</td>
-                <td>SIM card, souvenirs, unexpected costs.</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr class="total">
-                <td><strong>TOTAL (all-in)</strong></td>
-                <td>~$25–35/day</td>
-                <td><strong>$913–1,718</strong></td>
-                <td>3 weeks. Including flights.</td>
-              </tr>
-            </tfoot>
-          </table>
-
-          <div class="callout">
-            <p><strong>The bottom line:</strong> A 3-week Pakistan adventure including flights can cost under $1,200 if you're smart about it. That's less than a weekend city break in Paris with flights.</p>
           </div>
 
           <h2>Practical Info</h2>
@@ -539,8 +488,8 @@
             <li>Safety: Tourist areas (Gilgit-Baltistan, Hunza, Lahore, Islamabad) are safe. Always check your government's current travel advice and register with your embassy.</li>
             <li>Currency: Pakistani Rupee (PKR). ATMs available in Lahore, Islamabad, Gilgit. In remote areas, carry cash.</li>
             <li>SIM card: Buy a SIM at Lahore airport. Jazz or Zong are best for data coverage in the north.</li>
-            <li>Best time to visit: May–October for the Karakoram. July–August is peak season for K2 Base Camp.</li>
-            <li>Altitude: Gilgit is at ~1,500m, Skardu at ~2,228m, K2 BC at ~5,100m. Take 2–3 days to acclimatise before big treks.</li>
+            <li>Best time to visit: May–October for the Karakoram and northern valleys.</li>
+            <li>Altitude: Gilgit is at ~1,500m and Skardu at ~2,228m. Take time to acclimatise before long hikes.</li>
             <li>Language: Urdu is official. English is widely spoken in cities and tourist areas. Learning "shukriya" (thank you) goes a long way.</li>
             <li>Dress code: Conservative dress is respectful. Shoulders and knees covered in cities. In the mountains, trekking gear is fine.</li>
           </ul>
@@ -550,7 +499,7 @@
           <ul>
             <li>Sunrise from Eagle's Nest over Hunza Valley — the golden light on Rakaposhi</li>
             <li>Attabad Lake's impossible turquoise water against the brown Karakoram rock</li>
-            <li>K2 from Concordia — the 360° view of four 8,000m peaks at once</li>
+            <li>Shigar Valley ridgelines at sunset with layered mountain silhouettes</li>
             <li>Lahore Fort at dusk, the calls to prayer echoing across the city</li>
             <li>Street food: a plate of nihari with naan, steam rising, hands in frame</li>
             <li>Deosai Plateau wildflowers with a mountain backdrop</li>
@@ -573,8 +522,8 @@
               <span class="sidebar-stat-value">3–4 Weeks</span>
             </div>
             <div class="sidebar-stat">
-              <span class="sidebar-stat-label"><i class="fa-solid fa-wallet"></i> Budget (all-in)</span>
-              <span class="sidebar-stat-value">~$1,200</span>
+              <span class="sidebar-stat-label"><i class="fa-solid fa-route"></i> Route style</span>
+              <span class="sidebar-stat-value">Overland + Day hikes</span>
             </div>
             <div class="sidebar-stat">
               <span class="sidebar-stat-label"><i class="fa-solid fa-plane-departure"></i> Fly into</span>
@@ -582,7 +531,7 @@
             </div>
             <div class="sidebar-stat">
               <span class="sidebar-stat-label"><i class="fa-solid fa-mountain"></i> Max altitude</span>
-              <span class="sidebar-stat-value">5,100m (K2 BC)</span>
+              <span class="sidebar-stat-value">~4,114m (Deosai)</span>
             </div>
             <div class="sidebar-stat">
               <span class="sidebar-stat-label"><i class="fa-solid fa-sun"></i> Best season</span>
@@ -590,7 +539,7 @@
             </div>
             <div class="sidebar-stat">
               <span class="sidebar-stat-label"><i class="fa-solid fa-passport"></i> Visa</span>
-              <span class="sidebar-stat-value">eVisa ~$50</span>
+              <span class="sidebar-stat-value">eVisa required</span>
             </div>
           </div>
 
@@ -630,8 +579,8 @@
     <div class="container">
       <div class="newsletter-inner">
         <div class="newsletter-text">
-          <h3>Get the Pakistan packing list + budget sheet</h3>
-          <p>Free download when you subscribe. Updated with real figures after the trip.</p>
+          <h3>Get the Pakistan packing list</h3>
+          <p>Subscribe to get the latest route notes and field updates.</p>
         </div>
         <form class="newsletter-form" onsubmit="handleSubscribe(event)">
           <input type="email" placeholder="your@email.com" required aria-label="Email address" />
@@ -647,7 +596,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="logo"><img src="images/Sticker.png" alt="Carotino Adventures logo" class="logo-sticker" />Carotino Adventures</a>
-          <p>Adventure costs less than you think. A backpacker blog documenting budget travel, one country at a time.</p>
+          <p>A backpacker blog documenting real travel routes, one country at a time.</p>
           <div class="social-links">
             <a href="https://instagram.com/carotinoadventures" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
           </div>

@@ -455,7 +455,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .pakistan-bg {
   background: 
     linear-gradient(to top, rgba(13,43,26,0.8) 0%, rgba(13,43,26,0.1) 60%),
-    linear-gradient(135deg, var(--green-800) 0%, var(--green-600) 40%, #4a7c59 70%, var(--green-900) 100%);
+    url("https://source.unsplash.com/1200x900/?hunza,mountains,pakistan") center/cover no-repeat;
 }
 
 /* Mountain silhouette decoration */
@@ -690,11 +690,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .ig-wide { grid-column: span 2; }
 
 /* Different shades for visual variety */
-.ig-item:nth-child(1) { background: linear-gradient(135deg, var(--green-900), var(--green-700)); }
-.ig-item:nth-child(2) { background: linear-gradient(135deg, var(--green-600), var(--green-400)); }
-.ig-item:nth-child(3) { background: linear-gradient(135deg, var(--green-800), var(--green-600)); }
-.ig-item:nth-child(4) { background: linear-gradient(135deg, var(--green-700), var(--green-500)); }
-.ig-item:nth-child(5) { background: linear-gradient(135deg, var(--green-500), var(--green-300)); }
+.ig-item:nth-child(1) { background: url("https://source.unsplash.com/900x1200/?gilgit,baltistan") center/cover no-repeat; }
+.ig-item:nth-child(2) { background: url("https://source.unsplash.com/900x900/?lahore,mosque") center/cover no-repeat; }
+.ig-item:nth-child(3) { background: url("https://source.unsplash.com/900x900/?attabad,lake") center/cover no-repeat; }
+.ig-item:nth-child(4) { background: url("https://source.unsplash.com/1400x900/?karakoram,highway") center/cover no-repeat; }
+.ig-item:nth-child(5) { background: url("https://source.unsplash.com/900x900/?pakistan,valley") center/cover no-repeat; }
 
 .ig-cta { text-align: center; }
 .ig-note {
