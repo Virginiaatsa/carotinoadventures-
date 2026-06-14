@@ -321,7 +321,7 @@
       <ul class="nav-links">
         <li><a href="https://virginiaatsa.github.io/carotinoadventures-/">Home</a></li>
         <li class="nav-dropdown">
-          <a href="https://virginiaatsa.github.io/carotinoadventures-/pakistan.html" class="dropdown-toggle active">My trip <i class="fa-solid fa-chevron-down"></i></a>
+          <a href="#" class="dropdown-toggle active" aria-expanded="false" aria-haspopup="true">My trip <i class="fa-solid fa-chevron-down"></i></a>
           <ul class="dropdown-menu">
             <li><a href="https://virginiaatsa.github.io/carotinoadventures-/pakistan.html" class="active"><span class="flag" aria-hidden="true">🇵🇰</span> Pakistan</a></li>
           </ul>
@@ -639,6 +639,26 @@
     hamburger.addEventListener('click', () => {
       navLinks.classList.toggle('open');
       hamburger.classList.toggle('active');
+    });
+
+    // Dropdown menu (desktop + touch)
+    document.querySelectorAll('.dropdown-toggle').forEach((toggle) => {
+      toggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        const parent = toggle.closest('.nav-dropdown');
+        const isOpen = parent.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(isOpen));
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      document.querySelectorAll('.nav-dropdown.open').forEach((menu) => {
+        if (!menu.contains(e.target)) {
+          menu.classList.remove('open');
+          const toggle = menu.querySelector('.dropdown-toggle');
+          if (toggle) toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
     });
 
     // Newsletter

@@ -19,6 +19,9 @@
   --accent-orange: #ee8a1f;
   --accent-orange-dark: #d5740f;
   --accent-orange-light: #ffb65c;
+  --sticker-green: #2d9e47;
+  --sticker-green-dark: #1f6f34;
+  --sticker-green-muted: #3c6e47;
 
   --earth-dark: #1c1a14;
   --earth-mid:  #3b3626;
@@ -277,11 +280,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .nav-dropdown:hover .dropdown-menu,
+.nav-dropdown.open .dropdown-menu,
 .nav-dropdown:focus-within .dropdown-menu {
   display: block;
 }
 
 .nav-dropdown:hover .dropdown-toggle i,
+.nav-dropdown.open .dropdown-toggle i,
 .nav-dropdown:focus-within .dropdown-toggle i {
   transform: rotate(180deg);
 }
@@ -515,7 +520,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .pakistan-bg {
   background: 
     linear-gradient(to top, rgba(13,52,88,0.8) 0%, rgba(13,52,88,0.1) 60%),
-    url("https://source.unsplash.com/1200x900/?hunza,mountains,pakistan") center/cover no-repeat;
+    url("images/DSC03466.JPEG") center/cover no-repeat;
 }
 
 /* Mountain silhouette decoration */
@@ -664,6 +669,28 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-size: 0.88rem;
   color: var(--text-muted);
   line-height: 1.6;
+}
+
+/* Home page text in sticker-green palette */
+.home-page .section-header h2,
+.home-page .trip-card-info h3,
+.home-page .philosophy-text h2,
+.home-page .value-card h4 {
+  color: var(--sticker-green-dark);
+}
+
+.home-page .section-header p,
+.home-page .trip-card-info p,
+.home-page .philosophy-text p,
+.home-page .trip-meta span,
+.home-page .value-card p {
+  color: var(--sticker-green-muted);
+}
+
+.home-page .trip-meta i,
+.home-page .trip-highlights i,
+.home-page .value-icon {
+  color: var(--sticker-green);
 }
 
 /* ===== TIPS ===== */
@@ -904,11 +931,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .dropdown-toggle { width: 100%; justify-content: space-between; }
   .dropdown-menu {
     position: static;
-    display: block;
+    display: none;
     background: rgba(255,255,255,0.06);
     border: 1px solid rgba(255,255,255,0.12);
     margin-top: 10px;
   }
+  .nav-dropdown.open .dropdown-menu { display: block; }
 
   .hero-stats { gap: 20px; }
   .stat-divider { display: none; }
