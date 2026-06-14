@@ -18,14 +18,18 @@
   <!-- ===== NAVIGATION ===== -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
-      <a href="index.html" class="logo">
+      <a href="https://virginiaatsa.github.io/carotinoadventures-/" class="logo">
         <img src="images/Sticker.jpg" alt="Carotino Adventures logo" class="logo-sticker" />
         Carotino Adventures
       </a>
       <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="pakistan.html">Pakistan Trip</a></li>
-        <li><a href="#tips">Travel Tips</a></li>
+        <li><a href="https://virginiaatsa.github.io/carotinoadventures-/" class="active">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="https://virginiaatsa.github.io/carotinoadventures-/pakistan.html" class="dropdown-toggle">My trip <i class="fa-solid fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://virginiaatsa.github.io/carotinoadventures-/pakistan.html"><span class="flag" aria-hidden="true">🇵🇰</span> Pakistan</a></li>
+          </ul>
+        </li>
         <li><a href="#about">About</a></li>
         <li><a href="https://instagram.com/carotinoadventures" target="_blank" rel="noopener noreferrer" class="btn-nav">Follow me</a></li>
       </ul>
@@ -43,7 +47,7 @@
       <h1>Adventure Starts<br /><em>With One Trip</em></h1>
       <p class="hero-sub">Real trips. Real stories. Zero excuses.<br />Discover Pakistan's iconic landscapes and culture.</p>
       <div class="hero-actions">
-        <a href="pakistan.html" class="btn btn-primary">See the Pakistan Trip</a>
+        <a href="https://virginiaatsa.github.io/carotinoadventures-/pakistan.html" class="btn btn-primary">See My trip</a>
         <a href="#about" class="btn btn-ghost">My Story</a>
       </div>
       <div class="hero-stats">
@@ -106,7 +110,7 @@
             <li><i class="fa-solid fa-check"></i> Lahore's Walled City</li>
             <li><i class="fa-solid fa-check"></i> Practical travel route</li>
           </ul>
-          <a href="pakistan.html" class="btn btn-primary">Explore the Route</a>
+          <a href="https://virginiaatsa.github.io/carotinoadventures-/pakistan.html" class="btn btn-primary">Explore the Route</a>
         </div>
       </div>
     </div>
@@ -144,49 +148,6 @@
             <h4>Low Impact</h4>
             <p>Travelling light means treading lightly. Responsible tourism, always.</p>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== TRAVEL TIPS ===== -->
-  <section class="tips" id="tips">
-    <div class="container">
-      <div class="section-header">
-        <span class="tag">&#128218; Travel Tips</span>
-        <h2>Backpacker Tips</h2>
-        <p>Stuff I wish someone had told me before my first big trip.</p>
-      </div>
-      <div class="tips-grid">
-        <div class="tip-card">
-          <div class="tip-num">01</div>
-          <h4>Book flights 6–8 weeks out</h4>
-          <p>The best balance is usually 6-8 weeks ahead. Too early or too late can limit options.</p>
-        </div>
-        <div class="tip-card">
-          <div class="tip-num">02</div>
-          <h4>Eat where locals eat</h4>
-          <p>A meal one street away from the tourist spots is often more authentic and tastes far better.</p>
-        </div>
-        <div class="tip-card">
-          <div class="tip-num">03</div>
-          <h4>Overnight buses save daytime travel</h4>
-          <p>You travel + sleep at the same time. Use it on long legs between cities.</p>
-        </div>
-        <div class="tip-card">
-          <div class="tip-num">04</div>
-          <h4>Pakistan is safer than the news says</h4>
-          <p>Tourist regions like Hunza and Gilgit-Baltistan are incredibly welcoming. Do your research.</p>
-        </div>
-        <div class="tip-card">
-          <div class="tip-num">05</div>
-          <h4>Get travel insurance — always</h4>
-          <p>The one thing you should not skip. Medical support abroad can be complicated without it.</p>
-        </div>
-        <div class="tip-card">
-          <div class="tip-num">06</div>
-          <h4>Learn 10 words in the local language</h4>
-          <p>Hello, thank you, how much, delicious. It opens more doors than any guide book.</p>
         </div>
       </div>
     </div>
@@ -240,7 +201,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="logo"><img src="images/Sticker.jpg" alt="Carotino Adventures logo" class="logo-sticker" />Carotino Adventures</a>
+          <a href="https://virginiaatsa.github.io/carotinoadventures-/" class="logo"><img src="images/Sticker.jpg" alt="Carotino Adventures logo" class="logo-sticker" />Carotino Adventures</a>
           <p>A backpacker blog documenting real travel routes, one country at a time.</p>
           <div class="social-links">
             <!-- Replace carotinoadventures -->
@@ -250,8 +211,7 @@
         <div class="footer-links">
           <h5>Explore</h5>
           <ul>
-            <li><a href="pakistan.html">Pakistan Trip</a></li>
-            <li><a href="#tips">Travel Tips</a></li>
+            <li><a href="https://virginiaatsa.github.io/carotinoadventures-/pakistan.html">My trip</a></li>
             <li><a href="#about">About Me</a></li>
           </ul>
         </div>
@@ -301,7 +261,7 @@
       });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.trip-card-big, .value-card, .tip-card, .philosophy-text').forEach(el => {
+    document.querySelectorAll('.trip-card-big, .value-card, .philosophy-text').forEach(el => {
       el.classList.add('reveal');
       observer.observe(el);
     });
